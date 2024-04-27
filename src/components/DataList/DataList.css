@@ -1,0 +1,14 @@
+.data_list_list{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 3em 0em 0em 3em;
+    flex-direction: column;
+    row-gap: .5em;
+}
+
+@media screen and (max-width:769px) {
+    .data_list_list{
+    margin: 1.3em 0em 0em 1.2em;
+    }
+}

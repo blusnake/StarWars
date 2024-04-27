@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    max-height: 100vh;
+    max-width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1.5em 3.5em 0em 1.5em;
+    background: url('https://i.pinimg.com/originals/ba/9b/31/ba9b3199a9d5842c77adc95074770b01.png') no-repeat fixed;
+    -webkit-background-size: cover;
+}
+
+@media screen and (max-width:769px) {
+    body{
+        background: url('https://i.pinimg.com/originals/9b/5b/d1/9b5bd11c908c90e82a1c1d5c49ea2f5c.jpg') no-repeat center center fixed;
+        -webkit-background-size:cover;
+    }
+}

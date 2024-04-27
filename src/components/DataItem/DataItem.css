@@ -1,0 +1,29 @@
+li {
+    list-style: none;
+    /* background: rgb(51, 51, 51);
+    background: linear-gradient(90deg, rgba(51, 51, 51, 1) 0%, rgba(107, 107, 107, 1) 50%, rgb(145, 145, 145) 100%); */
+    padding: 1em 3em;
+    border: 3px solid black;
+    border-radius: 2em;
+    background: linear-gradient(90deg, var(--c1, #f6d365), var(--c2, #fda085) 51%, var(--c1, #f6d365)) var(--x, 0)/ 200%;    
+    transition: background .6s linear;
+    --c1:   rgb(41, 41, 41);
+    --c2:rgb(145, 145, 145);
+    font-size: 18px;
+}
+
+a {
+    color: whitesmoke;
+}
+
+li:hover{
+    cursor: pointer;
+    --x: 100%;
+}
+
+@media screen and (max-width:769px) {
+    li{
+        font-size: 14px;
+        padding: .7em 1.5em;
+    }
+}

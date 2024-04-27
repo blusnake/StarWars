@@ -1,0 +1,32 @@
+.btn_cont{
+    margin: 1.6em 0em 0em 3em;
+    padding-bottom: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.btn{
+    border: none;
+    border-radius: 2em;
+    padding: 1em 2em;
+    font-size: 15px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: gray;
+}
+
+@media screen and (max-width:769px) {
+    .btn_cont{
+        margin: 1em 0em 0em 1.6em;
+        gap: 12px;
+    }
+    .btn{
+        font-size: 13px;
+        padding: .8em 1.7em;
+    }
+}

@@ -1,0 +1,46 @@
+.datacard_cont{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-color: Grey;
+    padding: 3em;
+    border-radius: 2em;
+    background: linear-gradient(90deg, var(--c1, #f6d365), var(--c2, #fda085) 51%, var(--c1, #f6d365)) var(--x, 0)/ 200%;    
+    transition: background .5s linear;
+    --c1: #353535;
+    --c2: #808080;
+    font-size: 18px;
+}
+
+.datacard_cont:hover{
+    --x:100%;
+}
+
+.datacard_name{
+    color: whitesmoke;
+}
+
+.datacard_name:hover{
+    cursor: pointer;
+    color: lightgray;
+}
+
+.datacard_first_info,
+.datacard_second_info,
+.datacard_third_info{
+    color: white;
+}
+
+.datacard_first_info:hover,
+.datacard_second_info:hover,
+.datacard_third_info:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:769px) {
+    .datacard_cont{
+        font-size: 14px;
+        gap: 2em;
+        padding: 3em 2em;
+    }
+}
