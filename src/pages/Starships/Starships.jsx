@@ -4,6 +4,7 @@ import { setError } from '../../store/starships/starshipsSlice';
 import { useGetData } from '../../hooks/useGetData';
 import Button from '../../components/Button';
 import DataCard from '../../components/DataCard/DataCard';
+import Loader from '../../components/Loader/Loader';
 
 const Starships = () => {
   const { data, prevBtnLink, nextBtnLink, cardData, isLoading, btnClickHandle } = useGetData('starships', setError);
@@ -13,9 +14,9 @@ const Starships = () => {
   const hasStoredData = storedDataObj !== null;
 
   return (
-    <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', padding:'2em'}}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '2em' }}>
       {isLoading ? (
-        <>Loading</>
+        <div><Loader /></div>
       ) : (
         <div>
           {starshipsError ? (
@@ -24,21 +25,14 @@ const Starships = () => {
             <DataList data={data} path="starships" />
           )}
           <div className="btn_cont">
-            {prevBtnLink && (
-              <Button onClick={(e) => btnClickHandle(e, 'prev')}>Prev</Button>
-            )}
-            {nextBtnLink && (
-              <Button onClick={(e) => btnClickHandle(e, 'next')}>Next</Button>
-            )}
+            {prevBtnLink && <Button onClick={(e) => btnClickHandle(e)} value='prev' >Prev</Button>}
+            {nextBtnLink && <Button onClick={(e) => btnClickHandle(e)} value='next' >Next</Button>}
           </div>
         </div>
       )}
 
-      {hasStoredData ? (
-        <DataCard data={cardData} />
-      ) : (
-        <></>
-      )}
+      {<DataCard data={cardData} />}
+
     </div>
   );
 };
